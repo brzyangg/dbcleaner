@@ -22,6 +22,12 @@ func NewMySQLEngine(dsn string) *MySQL {
 	}
 }
 
+func NewMySQLEngineByDB(db *sql.DB) *MySQL {
+	return &MySQL{
+		db: db,
+	}
+}
+
 func (mysql *MySQL) Truncate(table string) error {
 	tx, err := mysql.db.Begin()
 	if err != nil {
