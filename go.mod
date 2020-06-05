@@ -1,3 +1,3 @@
-module github/brzyangg/dbcleaner
+module github.com/brzyangg/dbcleaner
 
 go 1.14
